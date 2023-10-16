@@ -44,7 +44,8 @@ header h1 {
   padding: 10px 0px 10px 10px;
   border: none;
   border-radius: 5px;
-  background-color: rgb(246, 246, 246);
+  /* background-color: rgb(255, 228, 228); */
+  background-color: rgb(254, 238, 238);
 }
 
 .loginForm input:focus {

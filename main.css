@@ -18,3 +18,23 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+button{
+	background:#ff1c1c;
+	border: none;
+	color: white;	
+	padding: 10px;
+	width: 183px;
+	border-radius: 5px;
+	text-align: center;
+	
+}
+header{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+footer{
+	margin-top: 30%;
+}
+input{
+	padding: 5px;
+}

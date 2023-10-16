@@ -1,21 +1,48 @@
 @font-face {
-	font-family: "Quicksand";
-	src: url("/assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+  font-family: "Quicksand";
+  src: url("../assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "Quicksand";
 }
 
 header {
-	width: 300px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
 }
 
 header img {
-	width: 100px;
+  width: 100px;
 }
+
+main {
+  min-height: 100vh;
+  width: 360px;
+  /* background-color: blue; */
+}
+
+.loginForm {
+  /* background-color: red; */
+  width: 90%;
+  margin: auto;
+}
+
 header h1 {
-	font-family: Quicksand;
-	font-size: 20px;
-	font-weight: 600;
-	text-align: center;
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.loginForm input {
+  width: 97%;
+  margin: 10px auto;
+  padding: 10px 0px 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(246, 246, 246);
 }

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +12,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  padding: 20px 0px;
+  background-color: #fbfbfb;
+  width: 360px;
+}
+
+
+img {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+footer p {
+  text-align: center;
+  font-size: medium;
+  font-family: "Quicksand";
 }
 
 .container {
@@ -26,5 +49,6 @@ body {
   border-radius: 10px;
   background-color: #ff9191;
   color: white;
-  font-size: large;
+  font-size: small;
 }
+

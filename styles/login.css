@@ -17,7 +17,12 @@ header {
 
 header img {
   width: 100px;
+  user-select: none;
+ 
 }
+
+
+
 
 main {
   min-height: 100vh;

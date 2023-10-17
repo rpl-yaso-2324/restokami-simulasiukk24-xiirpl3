@@ -16,7 +16,6 @@
   src: url("../assets/font/Nunito-VariableFont_wght.ttf") format("truetype");
 }
 
-
 .navbar {
   font-family: "Quicksand";
   display: flex;
@@ -61,7 +60,6 @@
   font-family: "Quicksand";
   font-size: 14px;
   padding: 5px;
-  width: 50px;
   max-width: auto;
   text-align: center;
   background-color: #c5c5c5;

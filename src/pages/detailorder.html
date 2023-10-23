@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="bg-blue-100 w-full border-b-2 border-blue-400 flex justify-center items-center gap-5 py-3"
+    >
+      <img class="w-[50px]" src="../../assets/img/store.png" alt="" />
+      <h5 class="font-medium text-[20px]">Pesanan Anda</h5>
+    </nav>
+    <div class="container px-5">
+      <p class="text-center my-6 text-[18px]">
+        Total Pembayaran Sebesar <br />
+        <span class="text-orange-400 font-bold">Rp. 101.000</span>
+      </p>
+      <input
+        class="w-full border-[12px] border-red-50 rounded-lg p-1 outline-none"
+        type="text"
+        placeholder="Catatan:"
+      />
+      <h2
+        class="text-[17px] flex justify-center items-center bg-gray-400 text-white h-[40px] rounded-[20px] my-5"
+      >
+        Metode Pembayaran
+      </h2>
+      <div class="border-t-orange-400 border-t-2">
+        <!-- radio btn 1 -->
+        <div
+          class="flex justify-start items-center gap-3 my-5 bg-gray-100 p-4 rounded-lg text-gray-500 font-bold"
+        >
+          <input
+            class=""
+            type="radio"
+            id="restopay"
+            name="metode_pembauaran"
+            value="restopay"
+          />
+          <label for="html">Resto Pay</label>
+          <p class="text-gray-500 ms-24 font-medium text-[12px]">
+            Saldo Resto Pay <br /><span class="text-orange-400"
+              >Rp. 500.000</span
+            >
+          </p>
+        </div>
+        <!-- radio btn 2 -->
+        <div
+          class="flex justify-start items-center gap-3 my-5 bg-gray-100 p-4 rounded-lg text-gray-500 font-bold"
+        >
+          <input
+            class=""
+            type="radio"
+            id="restopay"
+            name="metode_pembauaran"
+            value="restopay"
+          />
+          <label class="text-[18px]" for="html"
+            >Cash
+            <span class="text-[12px] text-red-400 font-medium ms-28"
+              >Siap kan uang pas !</span
+            ></label
+          >
+        </div>
+      </div>
+      <button
+        class="w-full h-[50px] bg-red-300 rounded-3xl text-white font-bold mt-10"
+        onclick="showPopup()"
+      >
+        Bayar Pesanan
+      </button>
+    </div>
+
+    <!-- Pop up -->
+    <div
+      id="popup"
+      class="absolute top-10 left-[60px] shadow-xl w-[270px] bg-white rounded-xl p-8 text-red-500 hidden"
+    >
+      <h3>Saldo Anda Tidak Cukup !</h3>
+    </div>
+    <!-- end -->
+    <script>
+      const popup = document.getElementById("popup");
+      const showPopup = () => {
+        popup.classList.remove("hidden");
+        setTimeout(() => {
+          popup.classList.add("hidden");
+        }, 2000);
+      };
+    </script>
+  </body>
+</html>

@@ -7,9 +7,9 @@
 
 @font-face {
   font-family: "Nunito-italic";
-  src: url("../assets/font/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/font/Nunito-Italic-VariableFont_wght.ttf")
+    format("truetype");
 }
-
 
 @font-face {
   font-family: "Nunito";
@@ -24,11 +24,10 @@
   width: 100%;
   padding: 10px 0px;
   justify-content: center;
-  border-bottom: 2px solid #ff9191;
-  /* position: fixed; */
+  border-bottom: 3px solid #ff9191;
+  position: fixed;
   width: 360px;
   top: 0;
-  /* background-color: #fbfbfb; */
   background-color: white;
 }
 
@@ -46,21 +45,16 @@
 
 .main-menu {
   width: 360px;
-  margin: 0px auto;
+  margin: 4em auto 18em;
   /* background-color: red; */
-  height: 81vh;
-  overflow: auto;
-}
-
-.main-menu::-webkit-scrollbar {
-  display: none;
+  height: 100vh;
 }
 
 .kategori {
   font-family: "Quicksand";
   font-size: 14px;
   padding: 5px;
-  max-width: auto;
+  width: max-content;
   text-align: center;
   background-color: #c5c5c5;
   color: white;
@@ -72,7 +66,7 @@
 .menu-section {
   /* background-color: red; */
   width: 90%;
-  overflow: auto;
+  height: 100%;
   margin: auto;
   /* height: 80vh; */
   /* background-color: blue; */
@@ -89,14 +83,12 @@
 
 .content p {
   margin: 5px 0px;
-  font-family: "Nunito" ;
-
+  font-family: "Nunito";
 }
 .content p:nth-child(1) {
   font-weight: 600;
   font-size: 14px;
   margin-top: 3px;
-
 }
 
 .content p:nth-child(2) {
@@ -125,7 +117,25 @@
 
 .container-bayar {
   width: 360px;
+  margin: 0px auto;
   padding: 10px;
-  /* background-color: blue; */
+  position: fixed;
+  bottom: 0;
+  background-color: red;
+  background-color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+  .main-menu {
+    width: 100%;
+  }
+  .container-bayar {
+    width: 100%;
+  }
+}

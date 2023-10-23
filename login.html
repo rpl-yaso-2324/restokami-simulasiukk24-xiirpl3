@@ -1,26 +1,40 @@
+<!-- zacki xii rpl 3 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/store.png"
+      type="image/x-icon"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/login.css" />
-    <title>Simulasi UKK</title>
+    <title>Simulasi UKK | Za</title>
   </head>
   <body>
     <div class="container">
       <main>
         <header>
           <img src="assets/img/store.png" alt="resto-kami" />
-          <h1 style="user-select: none;">SELAMAT DATANG DI RESTORAN KAMI</h1>
+          <h1 style="user-select: none">SELAMAT DATANG DI RESTORAN KAMI</h1>
         </header>
         <section class="login-section">
           <form id="loginForm" class="loginForm">
             <label for="username">Nama pelanggan</label>
-            <input type="text" id="username" name="username" required />
+            <input type="text" id="username" name="username"  />
+            <!-- required -->
             <label for="password">Nomor Telepon</label>
-            <input type="number" id="password" name="password" required />
-            <button type="submit" class="button-full">Lihat Menu</button>
+            <input type="number" id="password" name="password"  />
+            <!-- required -->
+            <a href="index.html">
+              <!-- submit -->
+              <button type="button" class="button-full">Lihat Menu</button>
+            </a>
           </form>
         </section>
       </main>

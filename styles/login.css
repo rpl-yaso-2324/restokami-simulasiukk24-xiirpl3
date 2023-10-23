@@ -18,11 +18,7 @@ header {
 header img {
   width: 100px;
   user-select: none;
- 
 }
-
-
-
 
 main {
   min-height: 100vh;
@@ -55,6 +51,6 @@ header h1 {
 }
 
 .loginForm input:focus {
-  outline: 2px solid red; 
+  outline: 2px solid red;
   box-shadow: 0 0 5px red;
 }

@@ -1,0 +1,22 @@
+/* @font-face {
+	font-family: "Quicksand";
+	src: url("/assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,500;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+input[type='radio']:checked:after  {
+  background-color: red;
+}

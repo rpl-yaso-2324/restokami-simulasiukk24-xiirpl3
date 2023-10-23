@@ -328,9 +328,13 @@ table td:nth-child(3) {
     width: 90%;
   }
 
-  .container-metode-pembayaran {
+  /* .container-metode-pembayaran {
     width: 90%;
   }
+
+  .container-metode-cash {
+    width: 9`0%;
+  } */
 
   table {
     width: 100%;
@@ -340,7 +344,8 @@ table td:nth-child(3) {
     width: 100%;
   }
 
-  .catatan-container {
-    width: 100%;
+  .detail-metode p {
+    font-size: 12px;
   }
+
 }

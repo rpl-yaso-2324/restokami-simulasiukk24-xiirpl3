@@ -33,6 +33,7 @@ const bayar = () => {
   }
 };
 
+
 // open modal
 const openModal = () => {
   d.getElementById("myModal").style.display = "block";

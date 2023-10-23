@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px red solid;
+}
+
+h2 {
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.card-body {
+    border-bottom: 2px yellow solid;
+    margin-top: 50px;
+    
+}
+
+.card {
+    display: flex;
+   
+
+}
+
+.card .meong {
+    margin-right: 10px;
+    background-color: aqua;
+}
+ /* Style the jumlah pesanan section */
+.jumlah-pesanan {
+    display: flex; /* Use flexbox to arrange items in a row */
+    align-items: center; /* Vertically center items */
+}
+
+/* Style the plus and minus buttons */
+button[type="button"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+.pindah{
+   margin-left: -55px;
+    width: 200px;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+footer {
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px 0;
+	color: #333;
+}

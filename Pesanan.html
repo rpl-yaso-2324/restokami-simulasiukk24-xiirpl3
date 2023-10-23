@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/pesanan.css">
+    <title>Card Generator</title>
+</head>
+
+<body>
+    <div class="top">
+        <img src="./assets/img/store.png" alt="Store Logo" width="40px">
+        <h2>Pesanan Anda</h2>
+    </div>
+    <h4> Total Pembayaran Sebesar</h4>
+    <h5>Rp.120.000</h5>
+    <input type="text" id="username" name="username" class="inpt" placeholder="Catatan:" />
+    <h3>Metode Pembayaran</h3>
+    <div class="grs">
+    </div>
+    <div class="mtd">
+        <input type="radio" name="clik">
+        <label for="html">Resto Pay</label>
+        <p>
+            Saldo Resto Pay <br>
+            <span class="spn">
+                Rp.600.000
+            </span>
+        </p>
+    </div>
+    <br>
+    <div class="ceklis">
+        <input type="radio" name="clik">
+        <label for="html">Cash</label>
+        <p>Siapkan Uang Sesuai Nominal Pembayaran</p>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>saldo anda kureng</h2>
+        </div>
+    </div>
+    <button id="show-popup">Bayar Pesanan</button>
+    <footer>
+        <p>
+            &copy; 2023 Restoran Kami. <br />
+            All rights reserved.
+        </p>
+    </footer>
+    <script>
+        document.getElementById("show-popup").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "block";
+        });
+
+        document.getElementById("close-popup").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style/menu.css">
+   <title>Menu</title>
+</head>
+
+<body>
+   <div class="top">
+      <img src="./assets/img/store.png" alt="Store Logo" width="40px">
+      <h2>Menu</h2>
+   </div>
+   <div class="card-body">
+      <div class="paket">
+         <h1>Paket</h1>
+      </div>
+   </div>
+   <div class="card">
+      <img class="meong" src="./assets/img/nasi.webp" alt="Meong" height="150px">
+      <div class="text">
+         <h3>Paket Hemat</h3>
+         <p>Nasi Goyeng</p>
+         <p>dengan saset raciku memudahkan masakan anda benar kann</p>
+         <h2>Rp 20,000</h2>
+         <div class="jumlah-pesanan">
+            <button type="button" id="kurang">-</button>
+            <h1 id="jumlah">0</h1>
+            <button type="button" id="tambah">+</button>
+         </div>
+
+      </div>
+   </div>
+   <div class="card-body">
+      <div class="paket">
+         <h1>Minuman</h1>
+      </div>
+   </div>
+   </div>
+   <div class="card">
+      <img class="meong" src="./assets/img/nasi.webp" alt="Meong" height="150px">
+      <div class="text">
+         <h3>Paket Hemat</h3>
+         <p>Nasi Goyeng</p>
+         <p>dengan saset raciku memudahkan masakan anda benar kann</p>
+         <h2>Rp 20,000</h2>
+         <div class="jumlah-pesanan">
+            <button type="button" id="kurang">-</button>
+            <h1 id="jumlah">0</h1>
+            <button type="button" id="tambah">+</button>
+         </div>
+
+      </div>
+   </div>
+   <div class="card-body">
+      <div class="paket">
+         <h1>Daharan</h1>
+      </div>
+   </div>
+   </div>
+   <div class="card">
+      <img class="meong" src="./assets/img/nasi.webp" alt="Meong" height="150px">
+      <div class="text">
+         <h3>Paket Hemat</h3>
+         <p>Nasi Goyeng</p>
+         <p>dengan saset raciku memudahkan masakan anda benar kann</p>
+         <h2>Rp 20,000</h2>
+         <div class="jumlah-pesanan">
+            <button type="button" id="kurang">-</button>
+            <h1 id="jumlah">0</h1>
+            <button type="button" id="tambah">+</button>
+         </div>
+        
+            <button class="pindah">Pesan</button>
+         
+      </div>
+   </div>
+   <footer>
+      <p>
+         &copy; 2023 Restoran Kami. <br />
+         All rights reserved.
+      </p>
+   </footer>
+
+   <script>
+      // Dapatkan referensi ke tombol tambah dan tombol kurang serta elemen tampilan jumlah
+      const tombolTambah = document.getElementById('tambah');
+      const tombolKurang = document.getElementById('kurang');
+      const tampilanJumlah = document.getElementById('jumlah');
+
+      // Inisialisasi jumlah
+      let jumlah = 0;
+
+      // Fungsi untuk memperbarui tampilan jumlah
+      function perbaruiJumlah() {
+         tampilanJumlah.textContent = jumlah;
+      }
+
+      // Event listener untuk tombol tambah
+      tombolTambah.addEventListener('click', function () {
+         jumlah++;
+         perbaruiJumlah();
+      });
+
+      // Event listener untuk tombol kurang
+      tombolKurang.addEventListener('click', function () {
+         if (jumlah > 0) {
+            jumlah--;
+            perbaruiJumlah();
+         }
+      });
+   </script>
+
+</body>
+
+</html>

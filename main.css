@@ -1,20 +1,69 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
-	width: 100%; /* Width 100% untuk mengisi lebar viewport pada kontainer utama */
-	max-width: 768px; /* Batasan lebar maksimum untuk ukuran mobile */
-	margin: 0 auto; /* Pusatkan kontainer pada layar */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.container{
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+
 }
+
+img {
+    width: 25%;
+    height: auto;
+    margin-left: 10px;
+  }
+
+.login-selection {
+    margin-top: 10vh;
+}
+
+input{
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    padding: 5px;
+    width: 300px;
+    margin: 10px;
+}
+
+h2{
+    margin-top: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+button{
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    padding: 5px;
+    width: 320px;
+    margin: 10px;
+    color: white;
+    background-color: rgb(240, 104, 104);
+}
+
+form{
+    margin-top: 3vh;
+}
+
+footer{
+    margin-top: 30vh;
+}
+

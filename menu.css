@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 70px;
+    margin-left: 100px;
+}
+.container hr{
+    background-color: red;
+    width: 390px;
+    margin-left: -100px;
+}
+
+.container h3{
+    font-size: 25px;
+    margin-top: -8vh;
+    margin-left: 15vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.menu h3{
+    background-color: gray;
+    width: 60px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.menu hr{
+    background-color: red;
+    width: 360px;
+    margin-top: -10px;
+}

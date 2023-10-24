@@ -1,0 +1,67 @@
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    nav{
+        border-bottom: 2px solid red ;
+        padding-bottom: 17px;
+    }
+    nav h1{
+      width: 100px;
+      margin: auto;
+      padding-top: 20px;
+    }
+    nav img{
+        width: 40px;
+        margin-left: 580px;
+        margin-top: -50px;
+    }
+    .name{
+        margin-top: 50px;
+        background-color: grey;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+        border-radius:20px;
+    }
+    .paket{
+        display: flex;
+        margin-top: 30px;
+    }
+    .gambarMenu{
+        background-color: bisque;
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+    }
+    .detailMenu{
+        margin-top: 10px;
+        margin-left: 50px;
+        width: 280px;
+        line-height: 20px;
+        box-sizing: border-box;
+    }
+    .pb{
+        display: flex;
+    }
+    .pb button{
+        margin-left: 35px;
+        width: 40px;
+    
+    }
+    .btn{
+        width: 300px;
+        margin-left: 50px;
+        margin-top: 30px ;
+        height: 40px;
+        margin-bottom: 20px;
+        font-size: larger;
+        border: none;
+        color: white;
+        background-color: rgb(247, 62, 62);
+    }
+

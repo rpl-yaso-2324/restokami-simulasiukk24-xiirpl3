@@ -1,0 +1,36 @@
+nav{
+    border-bottom: 2px solid red ;
+    padding-bottom: 17px;
+}
+nav h1{
+  text-align: center;
+  margin-top: 20px;
+}
+nav img{
+    width: 40px;
+    position: absolute;
+    left: 600px;
+    top: 12px;
+}
+.total{
+    text-align: center;
+}
+.total input{
+    height:30px ;
+}
+.metode{
+    display: flex;
+    background-color: rgb(153, 151, 151);
+}
+.radio-pay{
+    text-align: center;
+    margin-top:20px;
+}
+.radio-cash{
+    text-align: center;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.pay{
+    margin-left: 150px;
+}

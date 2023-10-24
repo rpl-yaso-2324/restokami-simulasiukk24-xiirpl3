@@ -2,12 +2,18 @@
 	font-family: "Quicksand";
 	src: url("/assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
+body{
+	font-family: Quicksand;
+}
+
 
 header {
-	width: 300px;
+	width: 360px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 56px;
+	margin-bottom: 50px;
 }
 
 header img {
@@ -15,7 +21,25 @@ header img {
 }
 header h1 {
 	font-family: Quicksand;
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: 600;
 	text-align: center;
 }
+.login-section{
+	width: 100%;
+	margin-left: -30%;
+}
+
+.login-section input{
+	width: 150%;
+	padding: 5% 0;
+}
+
+.login-section .lihatMenu{
+	width: 150%;
+	background-color: #FF9191;
+	padding: 5%;
+}
+
+
+

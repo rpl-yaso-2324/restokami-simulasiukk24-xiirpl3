@@ -1,0 +1,131 @@
+@font-face {
+	font-family: "Quicksand";
+	src: url("/assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
+body{
+	font-family: Quicksand;
+}
+.header {
+    width: 360px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #FF9191;
+    background: #FBFBFB;
+    padding-bottom: 15px;
+}
+
+.footer{
+    width: 360px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.konten {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.header h3 {
+    color: #000;
+    font-family: Quicksand;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+
+.divMenu {
+    padding: 10px;
+    height: 120px;
+    border-top: 5px solid #FF9D21;
+    margin: -10px 0 0 15px;
+    width: 320px;
+}
+
+.divMenu img {
+    width: 100px;
+    position: absolute;
+}
+
+.divMenu h1 {
+    margin-left: 140px;
+    margin-top: -5px;
+    color: #000;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.divMenu .deskripsi {
+    width: 181px;
+    margin-left: 140px;
+    margin-top: -15px;
+    color: #000;
+    font-family: Nunito;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.divMenu .harga {
+    margin-left: 140px;
+    margin-top: -5px;
+    color: #000;
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.divMenu .jumlahPes {
+    position: absolute;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin: -20px 0 0 140px;
+}
+
+.judulMenu {
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    background-color: #FF9D21;
+    width: 46px;
+    padding: 5px;
+    margin-left: 15px;
+    color: #FBFBFB;
+    border-radius: 5px;
+}
+
+.pesanBUtton {
+    width: 300px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 10px;
+background: #FF9191; 
+}

@@ -77,7 +77,7 @@
 	height: 5px;
 	border: none;
 	background-color: rgb(233, 134, 134);
-	margin: 1rem 0 1rem 0;
+	/* margin: 1rem 0 1rem 0; */
   }
   .section-page {
 	padding: 1rem;
@@ -158,7 +158,9 @@
 	font-weight: 500;
   }
   
-  /* Pesanan Page */
+
+
+  /* order Page */
   .section-page .hasil {
 	border: 1px solid #ccc;
 	border-radius: 8px;
@@ -166,6 +168,13 @@
 	text-align: center;
 	/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 	background: lightgray;
+  }
+  .order hr {
+	width: 100%;
+	height: 5px;
+	border: none;
+	background-color: #96C8EB;
+	/* margin: 1rem 0 1rem 0; */
   }
   .hasil h1  {
 	font-size: 19px;
@@ -229,9 +238,27 @@
 	font-weight: 600;
 	margin-top: 1rem;
   }
+  .resto {
+	color: #929292;
+	font-size: 12px;
+	font-family: Quicksand;
+	font-weight: 600;
+	padding-right: 10em;
+	padding-bottom: 10em;
+  }
+  .jml {
+	color: #FF9D21;
+	font-size: 12px;
+	font-family: Quicksand;
+	/* font-weight: 600; */
+	word-wrap: break-word;
+	padding-top: 10%;
+	padding-left: 8em;
+  }
   .span {
 	font-size: 10px;
-	margin-left: 17%;
+	margin-left: 25%;
+	color: #929292;
   }
   .btn-Bayar {
 	font-family: Quicksand;
@@ -245,3 +272,77 @@
 	border-radius: 0.375rem;
 	font-weight: 500;
   }
+
+  /* Payment */
+.pay hr {
+	width: 100%;
+	height: 5px;
+	border: none;
+	background-color: #33D9B2;
+}
+.total {
+	justify-content: center;
+	padding-top: 25%;
+	text-align: center;
+	font-size: 13px;
+}
+.total h2 {
+	color: #FF9D21;
+	font-size: 25px;
+}
+.succes {
+	background: #fff4f4;
+	border: none;
+	border-radius: 10px;
+	margin-left: 10%;
+	width: 300px;
+	height: 300px;
+	justify-content: center;
+}
+.succes img {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10%;
+    width: 60%;
+    margin: auto;
+}
+.succes h2 {
+	text-align: center;
+	/* padding-top: 2px; */
+	color: #33D9B2;
+	justify-content: center;
+}
+
+/* cahsier */
+.nav hr {
+	width: 100%;
+	height: 5px;
+	border: none;
+	justify-content: center;
+	background-color: #FF9D21;
+	/* margin: 2rem 0 2rem 0; */
+}
+.bayar {
+	background: rgba(172.83, 172.83, 172.83, 0.16);
+	border: none;
+	border-radius: 10px;
+	margin-left: 10%;
+	width: 300px;
+	height: 300px;
+	justify-content: center;
+}
+.bayar img {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10%;
+    width: 60%;
+    margin: auto;
+}
+.bayar h2 {
+	text-align: center;
+	/* padding-top: 2px; */
+	color: #929292;
+	justify-content: center;
+}

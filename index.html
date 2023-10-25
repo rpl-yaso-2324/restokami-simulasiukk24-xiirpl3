@@ -42,15 +42,16 @@
                   Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal +
                   Teh
                 </p>
-                <p>Rp. 36.000</p>
+                <p id="harga" >Rp. 36.000</p>
                 <div class="content2">
-                  <p>Jumlah: 2</p>
-                  <button class="tambah">+</button>
+                  <input type="number" hidden id="nojumlah" value="0" />
+                  <button class="tambah" id="tambah">+</button>
+                  <p id="jumlah">Jumlah: 0</p>
+                  <button class="kurang" id="kurang">-</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- card -->
           <div class="card">
             <div class="kategori" aria-readonly="true">Paket</div>
             <hr class="line" />
@@ -68,66 +69,17 @@
                   Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal +
                   Teh
                 </p>
-                <p>Rp. 36.000</p>
+                <p id="harga" >Rp. 36.000</p>
                 <div class="content2">
-                  <p>Jumlah: 2</p>
-                  <button class="tambah">+</button>
+                  <input type="number" hidden id="nojumlah" value="0" />
+                  <button class="tambah" id="tambah">+</button>
+                  <p id="jumlah">Jumlah: 0</p>
+                  <button class="kurang" id="kurang">-</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- card -->
-          <div class="card">
-            <div class="kategori" aria-readonly="true">Paket</div>
-            <hr class="line" />
-            <div class="container-content">
-              <div>
-                <img
-                  src="./images/example-product/indomie.jpg"
-                  alt=""
-                  class="produk-img"
-                />
-              </div>
-              <div class="content">
-                <p>Paket Hemat 1</p>
-                <p>
-                  Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal +
-                  Teh
-                </p>
-                <p>Rp. 36.000</p>
-                <div class="content2">
-                  <p>Jumlah: 2</p>
-                  <button class="tambah">+</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- card -->
-          <div class="card">
-            <div class="kategori" aria-readonly="true">Paket</div>
-            <hr class="line" />
-            <div class="container-content">
-              <div>
-                <img
-                  src="./images/example-product/indomie.jpg"
-                  alt=""
-                  class="produk-img"
-                />
-              </div>
-              <div class="content">
-                <p>Paket Hemat 1</p>
-                <p>
-                  Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal +
-                  Teh
-                </p>
-                <p>Rp. 36.000</p>
-                <div class="content2">
-                  <p>Jumlah: 2</p>
-                  <button class="tambah">+</button>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </section>
       </main>
       <div class="container-bayar">
@@ -137,12 +89,27 @@
           </a>
         </div>
       </div>
-      <!-- <footer>
-        <p>
-          &copy; 2023 Restoran Kami. <br />
-          All rights reserved.
-        </p>
-      </footer> -->
+
+      <script>
+        const jumlah = document.getElementById("jumlah");
+        const tambah = document.getElementById("tambah");
+        const kurang = document.getElementById("kurang");
+        let valueJumlah = document.getElementById("nojumlah").value;
+
+        tambah.addEventListener("click", () => {
+          valueJumlah = eval(valueJumlah + 1);
+          jumlah.innerHTML = `jumlah: ${valueJumlah}`;
+        });
+
+        kurang.addEventListener("click", () => {
+          if (valueJumlah > 0) {
+            valueJumlah = valueJumlah - 1;
+            jumlah.innerHTML = `jumlah: ${valueJumlah}`;
+          }
+        });
+
+         
+      </script>
     </div>
   </body>
 </html>

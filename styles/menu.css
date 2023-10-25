@@ -102,13 +102,25 @@
   margin: 7px 0px;
 }
 
-.content2 {
+.content2  {
   display: flex;
   justify-content: space-between;
 }
 
+.content2 p:nth-child(2) {
+  font-weight: 700;
+}
+
 .tambah {
-  background: rgb(170, 170, 255);
+  background: #96c8eb;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0px 25px;
+}
+
+.kurang {
+  background: #ff9191;
   color: white;
   border: none;
   border-radius: 20px;

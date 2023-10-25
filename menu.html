@@ -1,78 +1,60 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RestoKita</title>
     <link rel="stylesheet" href="menu.css">
 </head>
+
 <body>
     <div class="main">
         <div class="header">
             <img src="assets/img/store.png" alt="resto-kami" />
             <h3>Menu</h3>
         </div>
-        
+
         <div class="konten">
-            <div class="paket">
+            <div class="paket" id="paketkonten">
                 <p class="judulMenu">paket</p>
-                <div class="divMenu" id="paket1">
-                    <img src="./assets/img/paket1.jpg" alt="">
-                    <h1>Paket hemat 1</h1>
-                    <div class="deskripsi">
-                        <p>Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh </p>
-                    </div>
-                    <h2 class="harga">Rp: 29.000.00</h2>
-                    <div class="jumlahPes">
-                        <button>-</button>
-                        <p>Jumlah : 2</p>
-                        <button>+</button>
-                    </div>
+
+            </div>
+        </div>
+        <div class="makanan" id="kontenmakan">
+            <p class="judulMenu">Makanan</p>
+           
+        </div>
+        <div class="minuman">
+            <p class="judulMenu">Minuman</p>
+            <div class="divMenu" id="minuman1">
+                <img src="./assets/img/paket1.jpg" alt="">
+                <h1>Alpukat Kocok Negro</h1>
+                <div class="deskripsi">
+                    <p>Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh </p>
+                </div>
+                <h2 class="harga">Rp: 29.000.00</h2>
+                <div class="jumlahPes">
+                    <button>-</button>
+                    <p>Jumlah : 2</p>
+                    <button>+</button>
                 </div>
             </div>
-            <div class="makanan">
-                <p class="judulMenu">Makanan</p>
-                <div class="divMenu" id="makanan1">
-                    <img src="./assets/img/paket1.jpg" alt="">
-                    <h1>sate bakar</h1>
-                    <div class="deskripsi">
-                        <p>Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh </p>
-                    </div>
-                    <h2 class="harga">Rp: 29.000.00</h2>
-                    <div class="jumlahPes">
-                        <button>-</button>
-                        <p>Jumlah : 2</p>
-                        <button>+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="minuman">
-                <p class="judulMenu">Minuman</p>
-                <div class="divMenu" id="minuman1">
-                    <img src="./assets/img/paket1.jpg" alt="">
-                    <h1>Alpukat Kocok Negro</h1>
-                    <div class="deskripsi">
-                        <p>Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh </p>
-                    </div>
-                    <h2 class="harga">Rp: 29.000.00</h2>
-                    <div class="jumlahPes">
-                        <button>-</button>
-                        <p>Jumlah : 2</p>
-                        <button>+</button>
-                    </div>
-                </div>
-                <center>
+            <center>
                 <button class="pesanButton">Pesan</button>
             </center>
-            </div>
-
         </div>
-        
-        <div class="footer">
-            <center>
+
+    </div>
+
+    <div class="footer">
+        <center>
             <p> &copy; 2023 Restoran Kita
                 All rights reserved</p>
-            </center>
-        </div>
+        </center>
     </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

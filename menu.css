@@ -28,6 +28,7 @@ body{
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    
 }
 
 .header img {
@@ -51,7 +52,7 @@ body{
     padding: 10px;
     height: 120px;
     border-top: 5px solid #FF9D21;
-    margin: -10px 0 0 15px;
+    margin: -10px 0 20px 15px;
     width: 320px;
 }
 
@@ -93,6 +94,9 @@ body{
     font-weight: bold;
     line-height: normal;
 }
+input[type=number] {
+    appearance: textfield;
+  } 
 
 .divMenu .jumlahPes {
     position: absolute;
@@ -100,7 +104,12 @@ body{
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    margin: -20px 0 0 140px;
+    margin: 0 0 0 140px;
+}
+
+#numberInput{
+    width: 30px;
+    border: none;
 }
 
 .judulMenu {
@@ -117,7 +126,7 @@ body{
     border-radius: 5px;
 }
 
-.pesanBUtton {
+.pesanButton {
     width: 300px;
     flex-shrink: 0;
     color: #FFF;
@@ -128,4 +137,9 @@ body{
     line-height: normal;
     border-radius: 10px;
 background: #FF9191; 
+}
+
+.kurangbuton ,.tambahbuton{
+    width: 40px;
+    margin: 10px;
 }

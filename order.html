@@ -1,97 +1,93 @@
 <!-- zacki xii rpl 3 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="shortcut icon"
-      href="./assets/img/store.png"
-      type="image/x-icon"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/order.css" />
-    <title>Simulasi UKK | Za</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="navbar">
-        <img src="assets/img/store.png" alt="resto-kami" />
-        <h3>Menu</h3>
-      </header>
-      <!-- onsubmit="bayar()" -->
-      <main class="main-menu">
-        <section class="menu-section">
-          <div class="order-pembayaran">
-            <h4>Total Pembayaran Sebesar</h4>
-            <input type="hidden" id="total-pembayaran" value="101.000" />
-            <h3>Rp. 101.000</h3>
 
-            <div class="catatan-container">
-              <div class="order-catatan">
-                <label for="catatan">catatan:</label>
-                <textarea name="" id="" cols="35" rows="1"></textarea>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="./assets/img/store.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/order.css" />
+  <title>Simulasi UKK | Za</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="navbar">
+      <img src="assets/img/store.png" alt="resto-kami" />
+      <h3>Menu</h3>
+    </header>
+    <!-- onsubmit="bayar()" -->
+    <main class="main-menu">
+      <section class="menu-section">
+        <div class="order-pembayaran">
+          <h4>Total Pembayaran Sebesar</h4>
+          <input type="hidden" id="total-pembayaran" value="101.000" />
+          <h3 id="total">Rp. 101.000</h3>
+
+          <div class="catatan-container">
+            <div class="order-catatan">
+              <label for="catatan">catatan:</label>
+              <textarea name="" id="" cols="35" rows="1" ></textarea>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pesanan" aria-readonly="true">Metode pembayaran</div>
+        <hr class="line" />
+        <button class="btn-tup-up" id="btn-tup-up">Top Up Resto Pay</button>
+
+        <div class="container-pembayaran">
+          <div class="container-metode-pembayaran">
+            <div style="display: flex ; justify-content: center;">
+              <input type="radio" name="metode-pembayaran" id="resto-pay" />
+              <label for="resto-pay" style="font-size: 14px; margin-left: 5px ;">Resto Pay</label>
+            </div>
+            <div class="detail-metode">
+              <p>Saldo Resto Pay</p>
+              <p id="saldo">Rp. 500.000</p>
+              <input type="hidden" id="saldo-resto-pay" value="500000" />
             </div>
           </div>
 
-          <div class="pesanan" aria-readonly="true">Metode pembayaran</div>
-          <hr class="line" />
-
-          <div class="container-pembayaran">
-            <div class="container-metode-pembayaran">
-              <div style="display: flex ; justify-content: center;" >
-                <input type="radio" name="metode-pembayaran" id="resto-pay" />
-                <label for="resto-pay" style="font-size: 14px; margin-left: 5px ;">Resto Pay</label>
-              </div>
-              <div class="detail-metode">
-                <p>Saldo Resto Pay</p>
-                <p>Rp. 500.000</p>
-                <input type="hidden" id="saldo-resto-pay" value="500000" />
-              </div>
+          <div class="container-metode-cash">
+            <div style="display: flex ; justify-content: center;">
+              <input type="radio" name="metode-pembayaran" id="cash" />
+              <label for="Cash" style="font-size: 14px; margin-left: 5px ;">Cash</label>
             </div>
-
-            <div class="container-metode-cash">
-              <div style="display: flex ; justify-content: center;">
-                <input type="radio" name="metode-pembayaran" id="cash" />
-                <label for="Cash" style="font-size: 14px; margin-left: 5px ;">Cash</label>
-              </div>
-              <div class="detail-metode">
-                <p >Siapkan uang sesuai nominal pembayaran !</p>
-              </div>
+            <div class="detail-metode">
+              <p>Siapkan uang sesuai nominal pembayaran !</p>
             </div>
           </div>
-        </section>
-      </main>
-      <div class="container-bayar">
-        <button type="button" onclick="bayar()" class="button-full">
-          Pesan
-        </button>
-        <!-- <button type="submit"  class="button-full">
-            Pesan
-          </button> -->
+        </div>
+      </section>
+    </main>
+    <div class="container-bayar">
+      <button type="button" onclick="bayar()" class="button-full">
+        Pesan
+      </button>
+      <button onclick = "kembali()">kembali</button>
+    
+    </div>
+    <footer>
+      <p>
+        &copy; 2023 Restoran Kami. <br />
+        All rights reserved.
+      </p>
+    </footer>
+
+    <!-- modal -->
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <p id="message"> Lorem ipsum dolor sit amet consectetur,</p>
       </div>
-      <footer>
-        <p>
-          &copy; 2023 Restoran Kami. <br />
-          All rights reserved.
-        </p>
-      </footer>
+    </div>
 
-      <!-- modal -->
+    <div id="overlay" class="overlay"></div>
 
-      <div id="myModal" class="modal">
-          <div class="modal-content">
-              <span class="close" id="closeModal" >&times;</span>
-              <p id="message"> Lorem ipsum dolor sit amet consectetur,</p>
-          </div>
-      </div>
-
-      <div id="overlay" class="overlay" ></div>
-  
     <script src="./script/script.js"></script>
-  </body>
+</body>
+
 </html>

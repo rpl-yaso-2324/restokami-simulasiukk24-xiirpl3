@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div id="productList"></div>
+    
+    <script>
+      const product = [
+        {
+          id: 1,
+          nama_produk: "Paket Hemat 1",
+          deskripsi:
+            "Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh",
+          harga: 36000,
+          stock: 10,
+        },
+        {
+          id: 2,
+          nama_produk: "Paket Hemat 2",
+          deskripsi:
+            "Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh",
+          harga: 36000,
+          stock: 10,
+        },
+        {
+          id: 3,
+          nama_produk: "Paket Hemat 3",
+          deskripsi:
+            "Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh",
+          harga: 36000,
+          stock: 10,
+        },
+        {
+          id: 5,
+          nama_produk: "Paket Hemat 4",
+          deskripsi:
+            "Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh",
+          harga: 36000,
+          stock: 10,
+        },
+      ];
+
+      const productListDiv = document.getElementById("productList");
+
+      product.forEach((item) => {
+        const productDiv = document.createElement("div");
+
+
+        // productName.innerHTML = `${item.nama_produk}`;
+        productDiv.innerHTML = `<div class="card">
+          <div class="kategori" aria-readonly="true">Makanan</div>
+          <hr class="line" />
+          <div class="container-content">
+            <div>
+              <img src="${item.nama_produk}" alt="" class="produk-img" />
+            </div>
+            <div class="content">
+              <p>Paket Hemat 1</p>
+              <p>
+                Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal +
+                Teh
+              </p>
+              <p id="harga">Rp. 36.000</p>
+              <div class="content2">
+                <input type="number" hidden id="nojumlah" value="0" />
+                <button class="tambah" id="tambah">+</button>
+                <p id="jumlah">Jumlah: 0</p>
+                <button class="kurang" id="kurang">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    `;
+
+        productListDiv.appendChild(productDiv);
+      });
+
+    //   const productName = document.createElement("div").innerHTML = ` <div class="card">
+    //       <div class="kategori" aria-readonly="true">Makanan</div>
+    //       <hr class="line" />
+    //       <div class="container-content">
+    //         <div>
+    //           <img src="${item.img}" alt="" class="produk-img" />
+    //         </div>
+    //         <div class="content">
+    //           <p>Paket Hemat 1</p>
+    //           <p>
+    //             Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal +
+    //             Teh
+    //           </p>
+    //           <p id="harga">Rp. 36.000</p>
+    //           <div class="content2">
+    //             <input type="number" hidden id="nojumlah" value="0" />
+    //             <button class="tambah" id="tambah">+</button>
+    //             <p id="jumlah">Jumlah: 0</p>
+    //             <button class="kurang" id="kurang">-</button>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>`
+
+      
+    </script>
+  </body>
+</html>

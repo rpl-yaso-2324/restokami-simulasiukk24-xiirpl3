@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 100%; /* Width 100% untuk mengisi lebar viewport pada kontainer utama */
+	max-width: 768px; /* Batasan lebar maksimum untuk ukuran mobile */
+	margin: 0 auto; /* Pusatkan kontainer pada layar */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

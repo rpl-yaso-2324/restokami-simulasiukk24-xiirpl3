@@ -136,10 +136,15 @@ input[type=number] {
     font-weight: 600;
     line-height: normal;
     border-radius: 10px;
-background: #FF9191; 
+    background-color: #FF9191
+    ;
 }
 
 .kurangbuton ,.tambahbuton{
     width: 40px;
     margin: 10px;
+}
+.saldo{
+    font-weight: bold;
+    margin-left: 20px;
 }

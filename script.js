@@ -60,6 +60,12 @@ const paketDiv2 = document.getElementById("kontenmakan")
 var transactions = [];
 
 paket.forEach((item, index) => {
+    const hargaItemData = item.harga;
+    const nilaiDiformat = hargaItemData.toLocaleString('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 2,
+      });
     const divMenu = document.createElement("div");
     divMenu.className = "divMenu";
     divMenu.id = `paket_${index}`;
@@ -70,7 +76,9 @@ paket.forEach((item, index) => {
 <div class="deskripsi">
     <p>${item.desk}</p>
 </div>
-<h2 class="harga">Rp: <input type="number" id="hargaItem_${index}" value=${item.harga.toFixed(2)}></h2>
+<h2 class="harga"> <input type="text" hidden id="hargaItem_${index}" value=${item.harga}>
+<input type="text"  value=${nilaiDiformat}>
+</h2>
 <div class="jumlahPes">
 <button class="kurangbuton" " id="decrementButton}">-</button>
 jumlah:<input type="number" class="nilaiJumlah" id="numberInput_${index}" value="0">
@@ -80,8 +88,9 @@ jumlah:<input type="number" class="nilaiJumlah" id="numberInput_${index}" value=
 const incrementButton = divMenu.querySelector(".tambahbuton");
 const decrementButton = divMenu.querySelector(".kurangbuton");
 const numberInput1 = divMenu.querySelector(".nilaiJumlah");
-const hargaItemInput = divMenu.querySelector(`#hargaItem_${index}`);
+const hargaItemInput =divMenu.querySelector(`#hargaItem_${index}`);
 const numberInput = divMenu.querySelector(`#numberInput_${index}`);
+
 
 incrementButton.addEventListener("click", function(menuIndex) {
     let currentValue = parseInt(numberInput.value);
@@ -106,16 +115,34 @@ function kalkulasi() {
     if (transactions[index] === undefined) {
         transactions[index] = 0;
     }
+
+    const formattedNilaiTotal = nilaiTotal.toLocaleString("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 2
+    });
+
     transactions[index] = nilaiTotal;
-    displayTotal();
+    displayTotal(formattedNilaiTotal);
 }
-function displayTotal() {
+
+function displayTotal(total) {
     const totalTransaksi = transactions.reduce((total, transaction) => total + transaction, 0);
-    console.log(`Total dari semua transaksi: Rp ${totalTransaksi.toFixed(2)}`);
+
+    // Menggunakan toLocaleString() untuk memformat total transaksi dalam format mata uang
+    const formattedTotalTransaksi = totalTransaksi.toLocaleString("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 2
+    });
+
+    console.log(`Total dari semua transaksi: ${formattedTotalTransaksi}`);
 }
 
     paketDiv.appendChild(divMenu);
 });
+
+
 
 
 

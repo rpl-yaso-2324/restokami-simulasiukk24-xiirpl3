@@ -107,7 +107,7 @@ input[type=number] {
     margin: 0 0 0 140px;
 }
 
-#numberInput{
+.nilaiJumlah{
     width: 30px;
     border: none;
 }

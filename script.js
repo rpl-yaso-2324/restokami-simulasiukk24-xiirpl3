@@ -57,10 +57,12 @@ const login = () => {
 
 const paketDiv = document.getElementById("paketkonten")
 const paketDiv2 = document.getElementById("kontenmakan")
+var transactions = [];
 
-paket.forEach(item => {
+paket.forEach((item, index) => {
     const divMenu = document.createElement("div");
     divMenu.className = "divMenu";
+    divMenu.id = `paket_${index}`;
 
     divMenu.innerHTML = `
 <img src="./assets/img/paket1.jpg" alt="">
@@ -68,40 +70,56 @@ paket.forEach(item => {
 <div class="deskripsi">
     <p>${item.desk}</p>
 </div>
-<h2 class="harga">Rp: ${item.harga.toFixed(2)}</h2>
+<h2 class="harga">Rp: <input type="number" id="hargaItem_${index}" value=${item.harga.toFixed(2)}></h2>
 <div class="jumlahPes">
-<button class="kurangbuton" id="decrementButton">-</button>
-jumlah:<input type="number" id="numberInput" value="0">
-<button class="tambahbuton" id="incrementButton">+</button>
+<button class="kurangbuton" " id="decrementButton}">-</button>
+jumlah:<input type="number" class="nilaiJumlah" id="numberInput_${index}" value="0">
+<button class="tambahbuton" id="incrementButton" ">+</button>
 </div>
 `;
+const incrementButton = divMenu.querySelector(".tambahbuton");
+const decrementButton = divMenu.querySelector(".kurangbuton");
+const numberInput1 = divMenu.querySelector(".nilaiJumlah");
+const hargaItemInput = divMenu.querySelector(`#hargaItem_${index}`);
+const numberInput = divMenu.querySelector(`#numberInput_${index}`);
 
+incrementButton.addEventListener("click", function(menuIndex) {
+    let currentValue = parseInt(numberInput.value);
+    currentValue += 1;
+    numberInput.value = currentValue;
+    kalkulasi()
+});
+
+decrementButton.addEventListener("click", function(menuIndex) {
+    let currentValue = parseInt(numberInput.value);
+    if (currentValue > 0) {
+        currentValue -= 1;
+    }
+    numberInput.value = currentValue;
+    kalkulasi()
+});
+
+function kalkulasi() {
+    const hargaItem = parseFloat(hargaItemInput.value);
+    const jumlah = parseInt(numberInput.value);
+    const nilaiTotal = hargaItem * jumlah;
+    if (transactions[index] === undefined) {
+        transactions[index] = 0;
+    }
+    transactions[index] = nilaiTotal;
+    displayTotal();
+}
+function displayTotal() {
+    const totalTransaksi = transactions.reduce((total, transaction) => total + transaction, 0);
+    console.log(`Total dari semua transaksi: Rp ${totalTransaksi.toFixed(2)}`);
+}
 
     paketDiv.appendChild(divMenu);
 });
-makanan.forEach(item => {
-    const divMenu = document.createElement("div");
-    divMenu.className = "divMenu";
 
-    divMenu.innerHTML = `
-<img src="./assets/img/paket1.jpg" alt="">
-<h1>${item.nama}</h1>
-<div class="deskripsi">
-    <p>${item.desk}</p>
-</div>
-<h2 class="harga">Rp: ${item.harga.toFixed(2)}</h2>
-<div class="jumlahPes">
-<button class="kurangbuton" id="decrementButton">-</button>
-jumlah:<input type="number" id="numberInput" value="0">
-<button class="tambahbuton" id="incrementButton">+</button>
-</div>
 
-`;
-    paketDiv2.appendChild(divMenu);
-    
 
-    
-});
+
 
 
   

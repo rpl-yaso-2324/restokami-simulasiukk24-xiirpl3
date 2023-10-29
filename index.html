@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="main.css" />
 	<link rel="stylesheet" href="index.css" />
 	<title>Simulasi UKK</title>
+
 </head>
 
 <body>
@@ -17,13 +18,15 @@
 		</header>
 		<main>
 			<section class="login-section">
-				<form id="loginForm">
-					<label for="username">Username:</label><br><br>
-					<input type="text" id="username" name="username" required /><br><br>
-					<label for="password">Password:</label><br><br>
-					<input type="password" id="password" name="password" required /><br><br>
-					<button href="menu.html" class="lihatMenu" type="submit" onclick="login()">Login</button>
-				</form>
+
+				<label for="username">Username:</label><br><br>
+				<input type="text" id="userName" name="userName" /><br>
+				<p class="p1"></p><br>
+				<label for="password">Password:</label><br><br>
+				<input type="password" id="passWord" name="passWord" /><br>
+				<p class="p2"></p><br>
+				<button type="button" class="lihatMenu" onclick="loginVerif()">Login</button>
+
 			</section>
 		</main>
 
@@ -34,7 +37,28 @@
 			</p>
 		</footer>
 	</div>
-	<script src="script.js"></script>
+	<script>
+
+		const loginVerif = () => {
+			var username = "fahmi";
+			var pass = "123";
+			var userForm = document.getElementById("userName");
+			var passForm = document.getElementById("passWord");
+			var pesan1 = document.querySelector(".p1")
+			var pesan2 = document.querySelector(".p2")
+			
+			if (userForm.value == username) {
+				if (passForm.value == pass) {
+					window.location.href = "menu.html"
+				} else {
+					pesan2.innerHTML = "password salah"
+				}
+			} else {
+				pesan1.innerHTML = "username salah"
+			}
+
+		}
+	</script>
 </body>
 
 </html>

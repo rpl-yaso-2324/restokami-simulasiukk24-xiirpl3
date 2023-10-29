@@ -34,8 +34,7 @@ const makanan = [
     },
 ]
 //login
-const username = "fahmi";
-const pass = "123";
+
 var saldo = 1000000;
 var formatSaldo = saldo.toLocaleString('id-ID', {
     style: 'currency',
@@ -43,23 +42,9 @@ var formatSaldo = saldo.toLocaleString('id-ID', {
     minimumFractionDigits: 2,
 });
 var tampilSaldo = document.querySelector(".saldo");
-tampilSaldo.innerHTML =`saldo : ${formatSaldo}`
+tampilSaldo.innerHTML = `saldo : ${formatSaldo}`
 
-const login = () => {
-    var userForm = document.getElementById("username").value;
-    var passForm = document.getElementById("password").value;
 
-    if (userForm !== username) {
-        alert("username salah")
-
-    }
-    else if (passForm !== pass) {
-        alert("password salah")
-    }
-    else {
-        window.open('menu.html')
-    }
-}
 
 //menu
 
@@ -208,7 +193,7 @@ jumlah:<input type="number" class="nilaiJumlah" id="numberInput_${index}" value=
 });
 
 
-const pesanItem = () => {
+const pesanItem = (transaction) => {
     const totalTransaksi = transactions.reduce((total, transaction) => total + transaction, 0);
     const formattedTotalTransaksi = totalTransaksi.toLocaleString("id-ID", {
         style: "currency",
@@ -216,8 +201,9 @@ const pesanItem = () => {
         minimumFractionDigits: 2
     });
     console.log(`Total dari semua transaksi: ${formattedTotalTransaksi}`);
-    localStorage.setItem("total harga",`${totalTransaksi}`)
-    localStorage.setItem("total display",`${formattedTotalTransaksi}`)
+    localStorage.setItem("total harga", `${totalTransaksi}`)
+    localStorage.setItem("total display", `${formattedTotalTransaksi}`)
+
 }
 
 

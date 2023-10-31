@@ -53,35 +53,35 @@ const menu = [
 const cardContainer = document.getElementById("cardContainer");
 let card = ``;
 menu.map((data) => {
-	card += cardMenu(data.name, data.desc, data.price, data.count, data.id);
+	card = csrd + cardMenu(data.name, data.desc, data.price, data.count, data.id);
 	cardContainer.innerHTML = card;
 });
 
 function cardMenu(name, desc, price, count, id) {
 	return `<div
-  class="card m-2 flex items-center space-x-2 bg-white rounded-md p-2"
->
-  <div class="img-container w-[100px] h-[100px] p-2">
-    <img
-      class="menu-img"
-      src="/src/assets/img/store.png"
-      alt="tutug-oncom"
-    />
-  </div>
-  <div class="menu-detail w-8/12">
-    <h4 class="menu-title font-semibold">${name}</h4>
-    <p class="menu-desc text-xs my-1">
-      ${desc}
-    </p>
-    <h2 class="menu-price text-sm font-semibold"
-      ><span>Rp.</span>${price}</h2>
-    <div class="menu-count flex items-center justify-between mt-3">
-      <button class="plus bg-blue-200 rounded-lg px-6">+</button>
-      <p class="count text-xs"><span>Jumlah: </span>${count}</p>
-      <button class="min bg-red-200 rounded-lg px-6">-</button>
-    </div>
-  </div>
-</div>`;
+	class="card m-2 flex items-center space-x-2 bg-white rounded-md p-2"
+  >
+	<div class="img-container w-[100px] h-[100px] p-2">
+	  <img
+		class="menu-img"
+		src="/src/assets/img/store.png"
+		alt="tutug-oncom"
+	  />
+	</div>
+	<div class="menu-detail w-8/12">
+	  <h4 class="menu-title font-semibold">${name}</h4>
+	  <p class="menu-desc text-xs my-1">
+		${desc}
+	  </p>
+	  <h2 class="menu-price text-sm font-semibold"
+		><span>Rp.</span>${price}</h2>
+	  <div class="menu-count flex items-center justify-between mt-3">
+		<button class="plus bg-blue-200 rounded-lg px-6">+</button>
+		<p class="count text-xs"><span>Jumlah: </span>${count}</p>
+		<button class="min bg-red-200 rounded-lg px-6">-</button>
+	  </div>
+	</div>
+  </div>`;
 }
 
 // add menu count & order

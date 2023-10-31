@@ -1,4 +1,4 @@
-const d = document;
+const d = document; //
 let restoPay = d.getElementById("resto-pay");
 let cash = d.getElementById("cash");
 

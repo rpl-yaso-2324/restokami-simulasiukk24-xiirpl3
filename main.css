@@ -22,13 +22,13 @@ body {
 }
 
 img {
-    width: 25%;
-    height: auto;
-    margin-left: 10px;
-  }
+    display: flex;
+    justify-content: center;
+}
 
 .login-selection {
     margin-top: 10vh;
+    margin-left: 200px;
 }
 
 input{
@@ -61,6 +61,7 @@ button{
 
 form{
     margin-top: 3vh;
+    margin-left: 30px;
 }
 
 footer{

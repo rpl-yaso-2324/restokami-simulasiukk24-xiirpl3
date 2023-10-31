@@ -8,7 +8,7 @@
 		<title>Simulasi UKK</title>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container-i">
 			<header>
 				<img src="assets/img/store.png" alt="resto-kami" />
 				<h1>SELAMAT DATANG DI RESTORAN KAMI</h1>
@@ -16,11 +16,11 @@
 			<main>
 				<section class="login-section">
 					<form id="loginForm">
-						<label for="username">Username:</label>
-						<input type="text" id="username" name="username" required />
-						<label for="password">Password:</label>
-						<input type="password" id="password" name="password" required />
-						<button type="submit">Login</button>
+						<label for="username">Username:</label><br>
+						<input type="text" id="username" name="username" required /><br>
+						<label for="password">Password:</label><br>
+						<input type="password" id="password" name="password" required /><br>
+						<button type="submit" onclick=login()>Lihat Menu</button>
 					</form>
 				</section>
 			</main>
@@ -32,5 +32,6 @@
 				</p>
 			</footer>
 		</div>
+		<script src="./login.js"></script>
 	</body>
 </html>

@@ -3,19 +3,365 @@
 	src: url("/assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
+body{
+	font-family: Quicksand;
+}
 header {
 	width: 300px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 1rem;
 }
 
 header img {
 	width: 100px;
 }
 header h1 {
-	font-family: Quicksand;
+	
 	font-size: 20px;
 	font-weight: 600;
 	text-align: center;
+}
+.login-section{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5rem;
+}
+
+.login-section input{
+	border: none;
+	background-color: pink;
+	width: 250px;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.login-section button{
+	border: none;
+	background-color: orange;
+	width: 270px;
+	border-radius: 5px;
+	padding: 8px;
+	color: white;
+	font-family: Quicksand;
+	font-weight: 600;
+	font-size: 17px;
+	margin: 5px;
+
+}
+
+footer{
+	margin-top: 7rem;
+}
+
+/* menu Pages */
+ 
+.container .menupage{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin-top: 1 rem;
+
+} 
+
+.menupage h2{
+	font-size: 25px;
+	margin-left: 20px;
+}
+
+.menupage img{
+	width: 50px;
+}
+
+.line hr{
+	border: none;
+	height: 4px;
+	width: 100%;
+	background-color:pink ;
+	margin-top: 10px;
+
+}
+
+.menulist .text-listmenu1{
+	margin: 0;
+	padding: 10px;
+	width: 60px;
+	background-color: orange;
+	border-radius: 40px;
+	text-align: center;
+	margin: 10px;
+	color: white;
+	margin-top: 2rem;
+}
+
+.menulist .text-listmenu2{
+	margin: 0;
+	padding: 10px;
+	width: 80px;
+	background-color: orange;
+	border-radius: 40px;
+	text-align: center;
+	margin: 10px;
+	color: white;
+	margin-top: 2rem;
+}
+
+.line1 hr{
+	border: none;
+	height: 3px;
+	width: 100%;
+	background-color: orange;
+	margin-top: 5px;
+	
+
+}
+.menulist {
+	margin: 1rem 0;
+}
+.sectionmenu{
+	padding: 18px;
+}
+
+.menu-option{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.menu-option .img-menu{
+	width: 50%;
+	margin: 20px;
+	overflow: hidden;
+	border-radius: 0.5rem;
+}
+
+.img-menu img{
+	border-radius: 0.5rem;
+	width: 100%;
+	height: 100%;
+}
+
+.menu-option .text-menu{
+	padding: 10px;
+	width: 50%;
+	margin: -5px;
+	font-size: 15px;
+}
+
+.text-menu p{
+	font-size: 13px;
+	margin: 10px 0;
+}
+.menu-option .btn-menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.btn-menu button{
+	border-radius: 10px;
+	padding: 3px 1rem;
+	border: none;
+	background-color: rgb(255, 85, 113);
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.btn-menu .plus{
+	font-size: 20px;
+}
+
+
+  /* order Page */
+
+.section-page .hasil {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 15px;
+	text-align: center;
+	/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+	background: lightgray;
+  }
+  .order hr {
+	width: 100%;
+	height: 5px;
+	border: none;
+	background-color: #96C8EB;
+	/* margin: 1rem 0 1rem 0; */
+  }
+  .hasil h1  {
+	font-size: 19px;
+	margin: 10px 0;
+	text-align: center;
+  }
+  .hasil h1:first-child {
+	color: #333;
+  }
+  .hasil h2:last-child {
+	color: #FF9D21;
+	font-weight: bold;
+  }
+  .hasil h2 {
+	text-align: center;
+	margin: 10px 0;
+  }
+  .input-cttn {
+	margin-top: 1rem;
+	padding: 10px;
+	background: lightgray;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+  }
+  .input-cttn .input {
+	display: flex;
+	align-items: center;
+	padding: 6px;
+	background: #fff;
+	font-weight: 600;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+  }
+  .input-cttn .input input {
+	width: 100%;
+	padding: 5px;
+	outline: none;
+	border: none;
+  }
+  .checkbox h3 {
+	padding: 10px;
+	width: 200px;
+	background: rgb(190, 185, 185);
+	border-radius: 100px;
+	text-align: center;
+	color: white;
+  }
+  .checkbox hr {
+	height: 3px;
+	border: none;
+	background: rgb(255, 196, 0);
+	width: 100%;
+  }
+  .checkbox label {
+	display: flex;
+	align-items: center;
+	background: lightgray;
+	border: 1px solid #ccc;
+	padding: 0 5px 0 5px;
+	border-radius: 5px;
+	font-weight: 600;
+	margin-top: 1rem;
+  }
+  .resto {
+	color: #929292;
+	font-size: 12px;
+	font-family: Quicksand;
+	word-wrap: break-word;
+	float: right;
+  }
+  .jml {
+	color: #FF9D21;
+	font-size: 12px;
+	font-family: Quicksand;
+	word-wrap: break-word;
+	float: right;
+  }
+  .span {
+	font-size: 10px;
+	margin-left: 25%;
+	color: #929292;
+  }
+  .btn-Bayar {
+	font-family: Quicksand;
+	background: rgb(233, 134, 134);
+	border: none;
+	font-size: 17px;
+	color: white;
+	padding: 0.75rem;
+	margin-top: 3rem;
+	width: 100%;
+	border-radius: 0.375rem;
+	font-weight: 500;
+  }
+
+  /* PEMBAYARAN */
+.pay hr {
+	width: 100%;
+	height: 5px;
+	border: none;
+	background-color: #33D9B2;
+}
+.total {
+	justify-content: center;
+	padding-top: 5%;
+	text-align: center;
+	font-size: 13px;
+}
+.total h2 {
+	color: #FF9D21;
+	font-size: 25px;
+}
+.succes {
+	background: #fff4f4;
+	border: none;
+	border-radius: 10px;
+	margin-left: 10%;
+	width: 300px;
+	height: 300px;
+	justify-content: center;
+}
+.succes img {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10%;
+    width: 60%;
+    margin: auto;
+}
+.succes h2 {
+	text-align: center;
+	/* padding-top: 2px; */
+	color: #33D9B2;
+	justify-content: center;
+}
+
+/* KASIR */
+.nav hr {
+	width: 100%;
+	height: 5px;
+	border: none;
+	justify-content: center;
+	background-color: #FF9D21;
+	/* margin: 2rem 0 2rem 0; */
+}
+.bayar {
+	background: rgba(172.83, 172.83, 172.83, 0.16);
+	border: none;
+	border-radius: 10px;
+	margin-left: 10%;
+	width: 300px;
+	height: 300px;
+	justify-content: center;
+}
+.bayar img {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10%;
+    width: 60%;
+    margin: auto;
+}
+.bayar h2 {
+	text-align: center;
+	/* padding-top: 2px; */
+	color: #929292;
+	justify-content: center;
 }

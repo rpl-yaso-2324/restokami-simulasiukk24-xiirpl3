@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/dist/output.css" />
+		<title>Simulasi UKK</title>
+	</head>
+	<body class="w-full flex justify-center">
+		<div
+			class="container w-[360px] h-screen flex flex-col justify-between mx-2 shadow-md"
+		>
+			<header class="flex flex-col items-center pt-5">
+				<img
+					class="w-[100px]"
+					src="/src/assets/img/store.png"
+					alt="store-logo"
+				/>
+				<h1 class="text-lg text-center font-quicksand font-semibold pt-4 w-1/2">
+					SELAMAT DATANG DI RESTORAN KAMI
+				</h1>
+			</header>
+			<main>
+				<form id="loginForm" class="rounded px-8 pt-6 pb-8 mb-4">
+					<label for="username" class="block text-gray-700 text-lg mb-2"
+						>Username</label
+					>
+					<input
+						type="text"
+						id="username"
+						name="username"
+						required
+						class="bg-gray-100 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					/>
+					<label for="password" class="block text-gray-700 text-lg mb-2 mt-4"
+						>Password</label
+					>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						required
+						class="bg-gray-100 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					/>
+					<button
+						onclick="login()"
+						type="button"
+						class="bg-redpastel w-full text-white py-2 px-4 font-semibold text-xl rounded-xl mt-4 hover:bg-gray-200 hover:text-black focus:outline-none focus:shadow-outline"
+					>
+						Lihat Menu
+					</button>
+				</form>
+			</main>
+			<footer class="text-center text-gray-800 text-md pb-8">
+				<p>&copy; 2023 Restoran Kami.<br />All rights reserved.</p>
+			</footer>
+		</div>
+		<script src="/src/scripts/login.js"></script>
+	</body>
+</html>

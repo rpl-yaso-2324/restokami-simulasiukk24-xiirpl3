@@ -8,6 +8,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 25px;
 }
 
 header img {
@@ -18,4 +19,21 @@ header h1 {
 	font-size: 20px;
 	font-weight: 600;
 	text-align: center;
+}
+
+button{ 
+    margin-top: 15px;
+	padding: 5px;
+	border: none;
+	background-color: red;
+	width: 180px;
+	border-radius: 5px;
+	font-family: "Quicksand";
+}
+input{
+	padding: 5px;
+	border: none;
+	background-color: rgb(212, 211, 211);
+	margin-top: 10px;
+	border-radius: 2px;
 }

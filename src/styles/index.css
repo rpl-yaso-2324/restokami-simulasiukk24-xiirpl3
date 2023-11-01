@@ -20,3 +20,13 @@ input[type=radio] {
 input[type='radio']:checked:after  {
   background-color: red;
 }
+
+td {
+  padding: 10px 20px;
+  border: 1px black solid;
+}
+
+tr:nth-child(1) {
+  background-color: rgb(185, 185, 185);
+  font-weight: bold;
+}

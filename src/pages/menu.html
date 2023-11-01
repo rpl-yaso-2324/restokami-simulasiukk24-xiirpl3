@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css" />
     <link rel="stylesheet" href="../styles/index.css" />
     <title>Document</title>
   </head>
 
   <body>
-    <nav class="bg-red-100 w-full border-b-2 border-red-400 flex justify-center items-center gap-5 py-3">
+    <nav
+      class="bg-red-100 w-full border-b-2 border-red-400 flex justify-center items-center gap-5 py-3"
+    >
       <img class="w-[50px]" src="../../assets/img/store.png" alt="" />
       <h5 class="font-medium text-[20px]">Menu</h5>
     </nav>
-    <div class="container px-5">
-    <!-- Product -->
-      <div class="product my-5">
+    <div id="menu-section" class="container px-5">
+      <!-- Product -->
+      <!-- <div class="product my-5">
         <h2 class="text-[20px] flex justify-center items-center bg-gray-400 text-white w-[100px] h-[40px] rounded-[20px]">Paket</h2>
         <div class="border-t-2 border-orange-400 flex gap-5 py-4 my-4">
           <img class="w-[130px] h-[130px] rounded-lg" src="../../assets/img/ayam.jpeg" alt="" />
@@ -34,15 +36,19 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- pesan -->
-      <button class="w-full h-[50px] bg-red-300 rounded-3xl text-white font-bold">PESAN</button>
     </div>
+    <button onclick="pesan()" class="w-full h-[50px] bg-red-300 rounded-3xl text-white font-bold">
+      PESAN
+    </button>
     <footer class="mt-5">
       <p class="text-center">
         &copy; 2023 Restoran Kami. <br />
         All rights reserved.
       </p>
     </footer>
+
+    <script src="../js/menu.js"></script>
   </body>
 </html>

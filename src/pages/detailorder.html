@@ -14,10 +14,11 @@
       <img class="w-[50px]" src="../../assets/img/store.png" alt="" />
       <h5 class="font-medium text-[20px]">Pesanan Anda</h5>
     </nav>
+    <table class="w-full" id="list-order"></table>
     <div class="container px-5">
       <p class="text-center my-6 text-[18px]">
         Total Pembayaran Sebesar <br />
-        <span class="text-orange-400 font-bold">Rp. 101.000</span>
+        <span id="total" class="text-orange-400 font-bold"></span>
       </p>
       <input
         class="w-full border-[12px] border-red-50 rounded-lg p-1 outline-none"
@@ -38,14 +39,15 @@
             class=""
             type="radio"
             id="restopay"
-            name="metode_pembauaran"
+            name="metode_pembayaran"
             value="restopay"
           />
           <label for="html">Resto Pay</label>
           <p class="text-gray-500 ms-24 font-medium text-[12px]">
-            Saldo Resto Pay <br /><span class="text-orange-400"
-              >Rp. 500.000</span
-            >
+            Saldo Resto Pay <br /><span
+              id="saldo"
+              class="text-orange-400"
+            ></span>
           </p>
         </div>
         <!-- radio btn 2 -->
@@ -55,9 +57,9 @@
           <input
             class=""
             type="radio"
-            id="restopay"
-            name="metode_pembauaran"
-            value="restopay"
+            id="cash"
+            name="metode_pembayaran"
+            value="cash"
           />
           <label class="text-[18px]" for="html"
             >Cash
@@ -69,7 +71,7 @@
       </div>
       <button
         class="w-full h-[50px] bg-red-300 rounded-3xl text-white font-bold mt-10"
-        onclick="showPopup()"
+        onclick="buy()"
       >
         Bayar Pesanan
       </button>
@@ -78,19 +80,12 @@
     <!-- Pop up -->
     <div
       id="popup"
-      class="absolute top-10 left-[60px] shadow-xl w-[270px] bg-white rounded-xl p-8 text-red-500 hidden"
+      class="absolute top-10 left-[60px] shadow-xl w-[270px] bg-white rounded-xl p-8 hidden"
     >
-      <h3>Saldo Anda Tidak Cukup !</h3>
+      <h3 id="notif"></h3>
     </div>
     <!-- end -->
-    <script>
-      const popup = document.getElementById("popup");
-      const showPopup = () => {
-        popup.classList.remove("hidden");
-        setTimeout(() => {
-          popup.classList.add("hidden");
-        }, 2000);
-      };
-    </script>
+    <script src="../js/listOrder.js"></script>
+    <script src="../js/transaction.js"></script>
   </body>
 </html>

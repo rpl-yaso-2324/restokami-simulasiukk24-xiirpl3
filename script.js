@@ -1,6 +1,6 @@
 const username = document.getElementById('username');
 const password = document.getElementById('password');
-const verif = () => {
+const bayar = () => {
     if (username.value === "yudi" && password.value === "11") {
         window.location.href = "menu.html";
     } else if (username.value !== "yudi") {

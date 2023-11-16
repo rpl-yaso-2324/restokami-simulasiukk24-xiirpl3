@@ -75,7 +75,7 @@ menu.map((data) => {
 
   pesan.addEventListener("click", (e) => {
     e.preventDefault();
-    const jumlah = prompt("Masukan jumlah pesanan");
+    const jumlah = prompt("Berapa yang anda pesan?");
     // console.log("ada jumlah? " + jumlah);
 
     // JIka pengguna menekan pada prompt "OK"

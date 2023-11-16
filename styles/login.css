@@ -48,7 +48,10 @@ header h1 {
   border-radius: 5px;
   /* background-color: rgb(255, 228, 228); */
   background-color: rgb(254, 238, 238);
+  color: grey;
 }
+
+
 
 .loginForm input:focus {
   outline: 2px solid red;

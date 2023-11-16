@@ -38,7 +38,6 @@ menu.map((data) => {
   menuSection.innerHTML = card;
 });
 
-
 function innerCardMenu(name, desc, price, count, id) {
   return `<!-- card -->
       <div class="card">
@@ -69,79 +68,39 @@ function innerCardMenu(name, desc, price, count, id) {
 }
 
 // add count
+
 let order = [];
+let subtotal = 0;
 
 menu.map((data) => {
-  data.count = 0; // Inisialisasi jumlah untuk setiap item menjadi 0
+  data.count = 0;
 
   const addButton = document.getElementById(`addCount${data.id}`);
-  const countElement = document.getElementById(`count${data.id}`);
-  const minusButton = document.getElementById(`minuButton${data.id}`);
+  const minBtn = document.getElementById(`minuButton${data.id}`);
+  const count = document.getElementById(`count${data.id}`);
 
-  addButton.addEventListener("click", function (event) {
-    event.preventDefault(); 
-    data.count++; // Tambahkan jumlah hanya untuk item saat ini
-    countElement.innerHTML = data.count;
-
-    const subtotal = data.price * data.count; // Hitung subtotal hanya untuk item saat ini
-    console.log(`Subtotal for ${data.name}: ${subtotal}`);
-
+  addButton.addEventListener("click", () => {
+    data.count++;
+    count.innerText = `Jumlah: ${data.count}`;
     if (order[data.id] == null) {
       order.push(menu[data.id]);
     } else {
-      order[data.id].count = data.count;
+      order[data.id].count;
     }
-
-    // Hitung total harga
-    let totalPrice = 0;
-    order.map((item) => {
-      totalPrice += item.price * item.count;
-    });
-
-    console.log(`Total Price: ${totalPrice}`);
-    localStorage.setItem("total", totalPrice);
-  });
-
-  minusButton.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    if (data.count != 0) {
-      data.count--; // kurangi jumlah hanya untuk item saat ini
-      countElement.innerHTML = data.count;
-
-      const subtotal = data.price * data.count; // Hitung subtotal hanya untuk item saat ini
-      console.log(`Subtotal for ${data.name}: ${subtotal}`);
-
-      if (order[data.id] == null) {
-        order[data.id] = {
-          id: data.id,
-          name: data.name,
-          desc: data.desc,
-          price: data.price,
-          count: data.count,
-        };
-      } else {
-        order[data.id].count = data.count;
-      }
-
-      // Hitung total harga
-      let totalPrice = 0;
-      order.map((item) => {
-        totalPrice += item.price * item.count;
-      });
-
-      console.log(`Total Price: ${totalPrice}`);
-      localStorage.setItem("total", totalPrice);
-    }
+    console.log(order);
   });
 });
 
 const pesan = () => {
-  const total = localStorage.getItem("total");
-  console.log("total pesan " + total);
-  if (!total || total == 0 || total === null || total === undefined) {
-    alert("Pilih barang terlebih dahulu");
-  } else {
-    window.location.href = "order.html";
-  }
+  // save to localstorage
+  const jsonString = JSON.stringify(order);
+  localStorage.setItem("order", jsonString);
+  const storedJsonString = localStorage.getItem("order");
+  const retrievedArrayObjek = JSON.parse(storedJsonString);
+  console.log(retrievedArrayObjek);
+  window.location.href = "order.html";
 };
+
+// const addButton = document.getElementById(`addCount${data.id}`);
+// const countElement = document.getElementById(`count${data.id}`);
+// const minusButton = document.getElementById(`minuButton${data.id}`);

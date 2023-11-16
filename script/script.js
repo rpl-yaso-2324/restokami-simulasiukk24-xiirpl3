@@ -13,7 +13,9 @@ const formatUang = (rupiah) => {
   });
 };
 
-const total = document.getElementById("total"); // tag total
+// const total = document.getElementById("order"); // tag total
+// console.log(total);
+
 let data = localStorage.getItem("total"); // Ambil data pesanan
 
 if (data) {
@@ -127,3 +129,4 @@ btnTopUp.addEventListener("click", () => {
     saldo_user.innerHTML = formatUang(parseInt(defaultSaldo_u));
   }
 });
+

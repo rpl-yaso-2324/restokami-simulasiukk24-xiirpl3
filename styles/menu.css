@@ -45,10 +45,14 @@
 
 .main-menu {
   width: 360px;
-  margin: 4em auto 18em;
+  margin: 4em auto 0em;
   /* background-color: red; */
-  height: 100vh;
+  min-height: 83vh;
+  overflow: auto;
 }
+
+
+
 
 .kategori {
   font-family: "Quicksand";
@@ -102,7 +106,7 @@
   margin: 7px 0px;
 }
 
-.content2  {
+.content2 {
   display: flex;
   justify-content: space-between;
 }

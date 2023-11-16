@@ -1,7 +1,3 @@
-// saldo
-// topup alert
-// login
-
 localStorage.removeItem("total");
 
 var menu = [
@@ -26,6 +22,13 @@ var menu = [
     price: 36000,
     count: 0,
   },
+  {
+    id: 3,
+    name: "Paket 4",
+    desc: "Nasi Timbel + Ayam (bakar/goreng) + Tahu & Tempe + Sambal + Teh",
+    price: 40000,
+    count: 0,
+  },
 ];
 
 // add menu card
@@ -37,7 +40,6 @@ menu.map((data) => {
   card += innerCardMenu(data.name, data.desc, data.price, data.count, data.id);
   menuSection.innerHTML = card;
 });
-
 
 function innerCardMenu(name, desc, price, count, id) {
   return `<!-- card -->
@@ -55,12 +57,9 @@ function innerCardMenu(name, desc, price, count, id) {
               <div class="content">
                   <p>${name}</p>
                   <p>${desc}</p>
-                  <p>${price}</p>
                   <div class="content2">
-                  <input type="number" hidden id="nojumlah" value="0" />
-                  <button class="tambah" id="addCount${id}">+</button>
-                  <p >Jumlah: <span id="count${id}">${count}</span></p>
-                  <button class="kurang" id="minuButton${id}">-</button>
+                  <p>${price}</p>
+                  <button class="kurang" id="pesan${id}">Pesan</button>
                 </div>
               </div>
           </div>
@@ -72,76 +71,27 @@ function innerCardMenu(name, desc, price, count, id) {
 let order = [];
 
 menu.map((data) => {
-  data.count = 0; // Inisialisasi jumlah untuk setiap item menjadi 0
+  const pesan = document.getElementById(`pesan${data.id}`);
 
-  const addButton = document.getElementById(`addCount${data.id}`);
-  const countElement = document.getElementById(`count${data.id}`);
-  const minusButton = document.getElementById(`minuButton${data.id}`);
+  pesan.addEventListener("click", (e) => {
+    e.preventDefault();
+    const jumlah = prompt("Masukan jumlah pesanan");
+    // console.log("ada jumlah? " + jumlah);
 
-  addButton.addEventListener("click", function (event) {
-    event.preventDefault(); 
-    data.count++; // Tambahkan jumlah hanya untuk item saat ini
-    countElement.innerHTML = data.count;
-
-    const subtotal = data.price * data.count; // Hitung subtotal hanya untuk item saat ini
-    console.log(`Subtotal for ${data.name}: ${subtotal}`);
-
-    if (order[data.id] == null) {
-      order.push(menu[data.id]);
-    } else {
-      order[data.id].count = data.count;
-    }
-
-    // Hitung total harga
-    let totalPrice = 0;
-    order.map((item) => {
-      totalPrice += item.price * item.count;
-    });
-
-    console.log(`Total Price: ${totalPrice}`);
-    localStorage.setItem("total", totalPrice);
-  });
-
-  minusButton.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    if (data.count != 0) {
-      data.count--; // kurangi jumlah hanya untuk item saat ini
-      countElement.innerHTML = data.count;
-
-      const subtotal = data.price * data.count; // Hitung subtotal hanya untuk item saat ini
-      console.log(`Subtotal for ${data.name}: ${subtotal}`);
-
-      if (order[data.id] == null) {
-        order[data.id] = {
-          id: data.id,
-          name: data.name,
-          desc: data.desc,
-          price: data.price,
-          count: data.count,
-        };
+    // JIka pengguna menekan pada prompt "OK"
+    // Akan masuk ke kondisi dibawah
+    if (jumlah !== null) {
+      // Jika pengguna mengisi prompt atau prompt tidak kosong akan masuk ke kondisi dibawah
+      if (jumlah !== "") {
+        const total = data.price * jumlah; // hitung total hanya untuk item saat ini
+        // console.log(`total for ${data.name}: ${total}`); // Cek total
+        localStorage.setItem("total", total);
+        window.location.href = "order.html";
       } else {
-        order[data.id].count = data.count;
+        // Pengguna menekan "OK" tanpa memasukkan nilai
+        alert("Anda harus memasukkan jumlah pesanan.");
+        // Tambahkan logika lain jika diperlukan
       }
-
-      // Hitung total harga
-      let totalPrice = 0;
-      order.map((item) => {
-        totalPrice += item.price * item.count;
-      });
-
-      console.log(`Total Price: ${totalPrice}`);
-      localStorage.setItem("total", totalPrice);
     }
   });
 });
-
-const pesan = () => {
-  const total = localStorage.getItem("total");
-  console.log("total pesan " + total);
-  if (!total || total == 0 || total === null || total === undefined) {
-    alert("Pilih barang terlebih dahulu");
-  } else {
-    window.location.href = "order.html";
-  }
-};

@@ -1,0 +1,77 @@
+header img {
+    margin-left: 100px;
+
+}
+h1 {
+    margin-top: -60px;
+    margin-left: 120px;
+}
+
+h2 {
+    width: 300px;
+    height: 20px;
+    font-size: 26px;
+    margin-left: 30px;
+    margin-top: 150px;
+    font-family: "Nunito";
+}
+
+.price {
+    color: #FF9D21;
+    font-size: 35px;
+    margin-left: 100px;
+    margin-top: 30px;
+    font-family: "Nunito";
+}
+
+h3 {
+    color: #7A8FA5;
+    font-size: 25px;
+    margin-left: 20px;
+}
+  
+.main-order {
+    max-width: 360px;
+    margin: 0px auto;
+    background-color: red;
+    height: auto;
+}
+  
+.pesanan {
+    font-family: "Quicksand";
+    font-size: 14px;
+    width: max-content;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    background-color: #c5c5c5;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+  
+.container-image {
+    display: flex;
+    justify-content: center;
+    background-color: #f0eeee;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 40px 0px;
+    width: 90%;
+    margin-left: 25px;
+    margin-top: 40px;
+    font-family: "Nunito";
+}
+  
+.payment-section {
+    width: 330px;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+
+footer{
+    margin-top: 10vh;
+    font-size: 20px;
+}
+  

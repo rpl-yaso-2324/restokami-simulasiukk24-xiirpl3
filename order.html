@@ -20,22 +20,24 @@
     <!-- onsubmit="bayar()" -->
     <main class="main-menu">
       <section class="menu-section">
+        <button class="info-pesanan" aria-readonly="true">Info Pemesanan</button>
+        <hr class="line" />
         <div class="order-pembayaran">
-          <h4>Total Pembayaran Sebesar</h4>
-          <input type="hidden" id="total-pembayaran" value="101.000" />
-          <h3 id="total">Rp. 101.000</h3>
+              <div id="container-message" class="container-message">
+                <p id="content-message"></p>
+              </div>
 
-          <div class="catatan-container">
-            <div class="order-catatan">
-              <label for="catatan">catatan:</label>
-              <textarea name="" id="" cols="35" rows="11" ></textarea>
-            </div>
+          <div class="container-total">
+
+            <h4>Total Pembayaran Sebesar</h4>
+            <input type="hidden" id="total-pembayaran" value="101.000" />
+            <h3 id="total">Rp. 101.000</h3>
           </div>
         </div>
         
         <div class="pesanan" aria-readonly="true">Metode pembayaran</div>
         <hr class="line" />
-        <button class="btn-tup-up" id="btn-tup-up">Top Up Resto Pay</button>
+      
 
         <div class="container-pembayaran">
           <div class="container-metode-pembayaran">
@@ -62,11 +64,13 @@
         </div>
       </section>
     </main>
+    
     <div class="container-bayar">
       <button type="button" onclick="bayar()" class="button-full">
-        Pesan
+        Bayar Pesanan
       </button>
       <button onclick="kembali()" style="border: none; color: black; padding: 10px 5px; border-radius: 7px; margin: 10px 0px;">kembali</button>
+      <button class="btn-tup-up" id="btn-tup-up">Top Up Resto Pay</button>
     
     </div>
     <footer>

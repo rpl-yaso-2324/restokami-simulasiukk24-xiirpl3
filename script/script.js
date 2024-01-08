@@ -2,6 +2,8 @@ const d = document; //
 let restoPay = d.getElementById("resto-pay");
 let cash = d.getElementById("cash");
 
+// Elemen html
+const contentMessage = d.getElementById("content-message");
 let totalPembayaran = d.getElementById("total-pembayaran").value; // total pembayaran
 console.log(localStorage.getItem("total"));
 
@@ -16,12 +18,15 @@ const formatUang = (rupiah) => {
 // const total = document.getElementById("order"); // tag total
 // console.log(total);
 
-let data = localStorage.getItem("total"); // Ambil data pesanan
+let totalHarga = localStorage.getItem("total"); // Ambil data pesanan
+let jumlahPesanan = localStorage.getItem("jumlah"); // Ambil data jumlah
 
-if (data) {
-  total.innerHTML = formatUang(parseInt(data));
+if (jumlahPesanan && totalHarga) {
+  total.innerHTML = formatUang(parseInt(totalHarga));
+  contentMessage.innerHTML = `Anda telah memessan Lemon Tea sembanyak ${jumlahPesanan}.`;
 } else {
-  total.innerHTML = "anda tidak memilih barang";
+  contentMessage.innerHTML = "anda tidak memilih barang";
+  total.innerHTML = "Pesan terlebih dahulu";
 }
 
 let defaultSaldo_u = 50000;
@@ -53,7 +58,10 @@ const bayar = () => {
           openModal();
           d.getElementById("message").innerHTML = "Saldo Tidak Cukup !";
         } else {
-          localStorage.setItem("saldo", parseInt(defaultSaldo_u) - parseInt(data));
+          localStorage.setItem(
+            "saldo",
+            parseInt(defaultSaldo_u) - parseInt(data)
+          );
           window.location.href = "succes.html";
         }
       } else if (cash === true) {
@@ -129,4 +137,3 @@ btnTopUp.addEventListener("click", () => {
     saldo_user.innerHTML = formatUang(parseInt(defaultSaldo_u));
   }
 });
-

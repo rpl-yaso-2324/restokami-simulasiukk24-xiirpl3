@@ -52,7 +52,14 @@
 }
 
 
-
+.menu-section {
+  /* background-color: red; */
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  /* height: 80vh; */
+  /* background-color: blue; */
+}
 
 .kategori {
   font-family: "Quicksand";
@@ -67,13 +74,8 @@
   border: none;
 }
 
-.menu-section {
-  /* background-color: red; */
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  /* height: 80vh; */
-  /* background-color: blue; */
+.line {
+  border-color: #ff9d21;
 }
 
 .produk-img {
@@ -81,9 +83,6 @@
   margin: 5px;
 }
 
-.line {
-  border-color: #ff9d21;
-}
 
 .content p {
   margin: 5px 0px;

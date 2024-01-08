@@ -85,6 +85,7 @@ menu.map((data) => {
       if (jumlah !== "") {
         const total = data.price * jumlah; // hitung total hanya untuk item saat ini
         // console.log(`total for ${data.name}: ${total}`); // Cek total
+        localStorage.setItem("jumlah", jumlah);
         localStorage.setItem("total", total);
         window.location.href = "order.html";
       } else {

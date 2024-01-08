@@ -47,20 +47,20 @@ const bayar = () => {
   console.log("saldo " + saldo);
   console.log("totalPembayaran " + totalPembayaran);
   // Cek apakah memilih metode resto-pay
-  if (data) {
+  if (totalHarga) {
     if (!restoPay && !cash) {
       openModal();
       d.getElementById("message").innerHTML =
         "Plih metode pembayaran terlebih dahulu !";
     } else {
       if (restoPay === true) {
-        if (defaultSaldo_u < data) {
+        if (defaultSaldo_u < totalHarga) {
           openModal();
           d.getElementById("message").innerHTML = "Saldo Tidak Cukup !";
         } else {
           localStorage.setItem(
             "saldo",
-            parseInt(defaultSaldo_u) - parseInt(data)
+            parseInt(defaultSaldo_u) - parseInt(totalHarga)
           );
           window.location.href = "succes.html";
         }

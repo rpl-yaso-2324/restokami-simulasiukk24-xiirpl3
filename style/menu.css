@@ -1,0 +1,159 @@
+/* jika menggunakan link css import */
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Nunito-italic";
+    src: url("../assets/font/Nunito-Italic-VariableFont_wght.ttf")
+      format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Nunito";
+    src: url("../assets/font/Nunito-VariableFont_wght.ttf") format("truetype");
+  }
+  
+  .navbar {
+    font-family: "Quicksand";
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+    padding: 10px 0px;
+    justify-content: center;
+    border-bottom: 3px solid #ff9191;
+    position: fixed;
+    width: 360px;
+    top: 0;
+    background-color: white;
+  }
+  
+  .navbar img {
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px;
+  }
+  
+  .container-content {
+    display: flex;
+    padding: 10px 0px;
+    /* background-color: blue; */
+  }
+  
+  .main-menu {
+    width: 360px;
+    margin: 4em auto 0em;
+    /* background-color: red; */
+    min-height: 83vh;
+    overflow: auto;
+  }
+  
+  
+  
+  
+  .kategori {
+    font-family: "Quicksand";
+    font-size: 14px;
+    padding: 5px;
+    width: max-content;
+    text-align: center;
+    background-color: #c5c5c5;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 0px;
+    border: none;
+  }
+  
+  .menu-section {
+    /* background-color: red; */
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    /* height: 80vh; */
+    /* background-color: blue; */
+    overflow: auto;
+  }
+  
+  .produk-img {
+    width: 130px;
+    margin: 5px;
+  }
+  
+  .line {
+    border-color: #ff9d21;
+  }
+  
+  .content p {
+    margin: 8px 0px;
+    font-family: "Nunito";
+  }
+  .content p:nth-child(1) {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+  
+  .content p:nth-child(2) {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .content p:nth-child(3) {
+    font-weight: 600;
+    font-size: 12px;
+    margin: 7px 0px;
+  }
+  
+  .content2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content2 p:nth-child(2) {
+    font-weight: 700;
+  }
+  
+  .tambah {
+    background: #96c8eb;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 25px;
+  }
+  
+  .kurang {
+    background: #ff9191;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 25px;
+    margin-left: 10px;
+  }
+  
+  .container-bayar {
+    width: 360px;
+    margin: 0px auto;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    background-color: red;
+    background-color: white;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      width: 100%;
+    }
+    .card {
+      width: 100%;
+    }
+    .main-menu {
+      width: 100%;
+    }
+    .container-bayar {
+      width: 100%;
+    }
+  }

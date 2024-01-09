@@ -1,0 +1,52 @@
+@font-face {
+	font-family: "Quicksand";
+	src: url("../assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+  }
+  * {
+	margin: 0;
+	padding: 0;
+  }
+  
+  footer {
+	padding: 20px 0px;
+	/* background-color: #fbfbfb; */
+	/* background-color: #bc1616; */
+	width: 360px;
+	
+  }
+  
+  
+  footer p {
+	text-align: center;
+	font-size: medium;
+	font-family: "Quicksand";
+  }
+  
+  .container {
+	width: 100%; /* Batasan lebar maksimum untuk ukuran mobile */
+	margin: 0 auto; /* Pusatkan kontainer pada layar */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .button-full {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: #ff9191;
+	color: white;
+	font-size: small;
+	margin: 0px auto;
+  }
+  
+  @media only screen and (max-width: 600px) {
+	.button-full {
+	  width: 100%;
+	}
+  
+	footer{
+	  width: 100%;
+	}
+  }

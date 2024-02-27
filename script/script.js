@@ -1,10 +1,15 @@
-const d = document; //
-let restoPay = d.getElementById("resto-pay");
-let cash = d.getElementById("cash");
+// fungsi mengambil element
+
+function dom(classOrId) {
+  return document.querySelector(classOrId);
+}
+
+let restoPay = dom("resto-pay");
+let cash = dom("cash");
 
 // Elemen html
-const contentMessage = d.getElementById("content-message");
-let totalPembayaran = d.getElementById("total-pembayaran").value; // total pembayaran
+const contentMessage = dom("#content-message");
+let totalPembayaran = dom("#total-pembayaran").value; // total pembayaran
 console.log(localStorage.getItem("total"));
 
 const formatUang = (rupiah) => {
@@ -14,9 +19,6 @@ const formatUang = (rupiah) => {
     minimumFractionDigits: 0,
   });
 };
-
-// const total = document.getElementById("order"); // tag total
-// console.log(total);
 
 let totalHarga = localStorage.getItem("total"); // Ambil data pesanan
 let jumlahPesanan = localStorage.getItem("jumlah"); // Ambil data jumlah
@@ -31,16 +33,17 @@ if (jumlahPesanan && totalHarga) {
 
 let defaultSaldo_u = 50000;
 localStorage.setItem("saldo", defaultSaldo_u); // set default saldo ke localstorage
-const saldo_user = document.getElementById("saldo");
+const saldo_user = dom("#saldo");
 let saldo = localStorage.getItem("saldo"); // saldo dari localstorage
 saldo_user.innerHTML = formatUang(parseInt(saldo));
+
 
 const bayar = () => {
   // let saldo = localStorage.getItem("saldo"); // saldo dari localstorage
   console.log("saldo dari bayar " + saldo);
 
-  let restoPay = d.getElementById("resto-pay").checked;
-  let cash = d.getElementById("cash").checked;
+  let restoPay = dom("#resto-pay").checked;
+  let cash = dom("#cash").checked;
 
   console.log("pulih restopay " + restoPay);
   console.log("pilih cash " + cash);
@@ -50,13 +53,12 @@ const bayar = () => {
   if (totalHarga) {
     if (!restoPay && !cash) {
       openModal();
-      d.getElementById("message").innerHTML =
-        "Plih metode pembayaran terlebih dahulu !";
+      dom("#message").innerHTML = "Plih metode pembayaran terlebih dahulu !";
     } else {
       if (restoPay === true) {
         if (defaultSaldo_u < totalHarga) {
           openModal();
-          d.getElementById("message").innerHTML = "Saldo Tidak Cukup !";
+          dom("#message").innerHTML = "Saldo Tidak Cukup !";
         } else {
           localStorage.setItem(
             "saldo",
@@ -81,30 +83,30 @@ const kembali = () => {
 
 // open modal
 const openModal = () => {
-  d.getElementById("myModal").style.display = "block";
-  d.getElementById("overlay").style.display = "block";
+  dom("#myModal").style.display = "block";
+  dom("#overlay").style.display = "block";
 };
 
 // close modal
 const closeModal = () => {
-  d.getElementById("myModal").style.display = "none";
-  d.getElementById("overlay").style.display = "none";
+  dom("#myModal").style.display = "none";
+  dom("#overlay").style.display = "none";
 };
 
-d.getElementById("closeModal").addEventListener("click", () => {
+dom("#closeModal").addEventListener("click", () => {
   closeModal();
 });
 
-d.getElementById("overlay").addEventListener("click", () => {
+dom("#overlay").addEventListener("click", () => {
   closeModal();
 });
 
 // klik container pembayaran
 
-const klikRestoPay = d.querySelector(".container-metode-pembayaran");
-const klikCash = d.querySelector(".container-metode-cash");
+const klikRestoPay = dom(".container-metode-pembayaran");
+const klikCash = dom(".container-metode-cash");
 
-// restoPay = d.getElementById("resto-pay") = true
+// restoPay = dom("#resto-pay") = true
 let checkedResto = false;
 klikRestoPay.addEventListener("click", () => {
   checkedResto = !checkedResto;
@@ -118,7 +120,7 @@ klikCash.addEventListener("click", () => {
 });
 
 // Top up resto pay
-const btnTopUp = d.getElementById("btn-tup-up");
+const btnTopUp = dom("#btn-tup-up");
 
 btnTopUp.addEventListener("click", () => {
   let TopUp = prompt("Top Up berapa?");

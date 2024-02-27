@@ -1,5 +1,9 @@
 localStorage.removeItem("total");
 
+function dom(classOrId) {
+  return document.querySelector(classOrId)
+}
+
 var menu = [
   {
     id: 0,
@@ -32,7 +36,8 @@ var menu = [
 ];
 
 // add menu card
-const menuSection = document.querySelector(".menu-section");
+// .menu-section
+const menuSection = dom(".menu-section");
 
 let card = ``;
 
@@ -71,7 +76,7 @@ function innerCardMenu(name, desc, price, count, id) {
 let order = [];
 
 menu.map((data) => {
-  const pesan = document.getElementById(`pesan${data.id}`);
+  const pesan = dom(`#pesan${data.id}`);
 
   pesan.addEventListener("click", (e) => {
     e.preventDefault();
